@@ -12,9 +12,10 @@ Mc1 = 4.77;
 Mc2 = 2.39;
 
 gamma = (J1+J2)/J1;
-w0 = sqrt((C12*(J1+J2))/(J1*J2));
-wc1 = w0/sqrt(gamma);
-wc2 = w0;
+Omega12 = sqrt(C12*(J1+J2)/(J1*J2));
+eps_avg = M1/(J1+J2);
+wc1 = Omega12/sqrt(gamma);
+wc2 = Omega12;
 
 betta = Mp/wnom;
 J=J1+J2;

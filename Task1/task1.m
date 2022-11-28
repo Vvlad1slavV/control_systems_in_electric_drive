@@ -3,9 +3,6 @@ config;
 %% Theory
 M1 = 0.1*Mnom;
 
-Omega12 = sqrt(C12*(J1+J2)/(J1*J2));
-eps_avg = M1/(J1+J2);
-
 %% Modeling
 TIME = 0.2;
 sim_out = sim("model1.slx", TIME);
