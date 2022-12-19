@@ -16,7 +16,7 @@ w1t = eps_avg*time + J2/J1*eps_avg/Omega12*sin(Omega12*time);
 w2t = eps_avg*time - eps_avg/Omega12*sin(Omega12*time);
 M12t = J2*(eps_avg - eps_avg*cos(Omega12*time));
 %%
-plot_task1(time, w1, w1t, "$Time, s$", "$\omega_1(t)$",{'$\omega_1$','$\omega_{1t}$'}, true)
+plot_task1(time, w1, w1t, "$Time, s$", "$\omega_1(t)$", {'$\omega_1$','$\omega_{1t}$'}, true)
 saveas(gcf, path+'task1_omega1.png')
 plot_task1(time, w2, w2t, "$Time, s$", "$\omega_2(t)$",{'$\omega_2$','$\omega_{2t}$'}, true)
 saveas(gcf, path+'task1_omega2.png')
