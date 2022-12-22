@@ -11,15 +11,20 @@ Kpr = 10;
 Mc1 = 4.77;
 Mc2 = 2.39;
 
+%%
 betta = Mp/wnom;
 J=J1+J2;
+Tm = J/betta;
 %%
 u_zad = 10;
-M_zad = Mnom;
+w_zad = wnom;
+Kw = u_zad/wnom;
 
-Km = u_zad/M_zad;
-Tmu = Tpr;
-Ti = Te;
-Kp = Te/(2*Tpr*Kpr*Km*betta);
+T12 = -roots([Te*Tm Tm 1]);
+T2 = 1/T12(1);
+T1 = 1/T12(2);
 
-ELMEX = 0;
+Tmu = Tpr + T2;
+Ti = T1;
+Kp = T1/(2*Tmu*Kpr*Kw);
+Mc = 0;
